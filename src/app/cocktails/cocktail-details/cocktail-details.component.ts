@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input } from '@angular/core';
 import {Cocktail} from "../shared/cocktail.model";
 import {FavoriteButtonComponent} from "../shared/favorite-button/favorite-button.component";
 import {AlcoholicTagComponent} from "../shared/alcoholic-tag/alcoholic-tag.component";
@@ -17,10 +17,6 @@ import {RouterLink} from "@angular/router";
   templateUrl: './cocktail-details.component.html',
   styleUrl: './cocktail-details.component.scss'
 })
-export class CocktailDetailsComponent implements OnInit {
+export class CocktailDetailsComponent {
   @Input() cocktail: Cocktail;
-
-  ngOnInit() {
-    console.log(this.cocktail);
-  }
 }

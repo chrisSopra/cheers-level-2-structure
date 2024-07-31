@@ -24,12 +24,4 @@ import {RouterLink} from "@angular/router";
 })
 export class CocktailCardComponent {
   @Input() cocktail: Cocktail;
-
-  isFavorite(id: string) {
-    return localStorage.getItem(id) === 'true';
-  }
-
-  toggleFavorite(id: string) {
-    localStorage.setItem(id, String(!this.isFavorite(id)));
-  }
 }

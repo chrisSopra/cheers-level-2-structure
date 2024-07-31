@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class PipeSeparatedValuesPipe implements PipeTransform {
 
-  transform(value: string[]): unknown {
+  transform(value: string[]): string {
     return value.reduce((accumulator, currentValue) => accumulator += `${currentValue} | `, "").slice(0, -3);
   }
 

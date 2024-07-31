@@ -8,7 +8,7 @@ import {Component, EventEmitter, Output} from '@angular/core';
   styleUrl: './filters.component.scss'
 })
 export class FiltersComponent {
-  @Output() filterTerm = new EventEmitter<string>();
+  @Output() filterTerm: EventEmitter<string> = new EventEmitter<string>();
 
   filter(value: string) {
     this.filterTerm.emit(value);
