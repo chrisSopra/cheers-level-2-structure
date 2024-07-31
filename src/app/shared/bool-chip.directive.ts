@@ -1,5 +1,6 @@
-import {Directive, ElementRef, Input, OnInit, Renderer2} from '@angular/core';
+import {Directive, ElementRef, inject, Input, OnInit, Renderer2} from '@angular/core';
 
+// TODO: child directive
 @Directive({
   selector: '[appBoolChip]',
   standalone: true

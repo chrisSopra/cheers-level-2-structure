@@ -29,14 +29,15 @@
     margin: 0 0 0.5em 0;
   }
 
-  span {
+  app-favorite-button {
     position: absolute;
     top: 0;
     right: 0;
-    margin: .5em;
+    margin: .25em .5em;
   }
 }
 
 .card-ingredients {
   word-break: break-word;
+  font-size: .75em;
 }

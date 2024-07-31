@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, Input, ViewChild} from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {Cocktail} from "../shared/cocktail.model";
 import {CocktailCardComponent} from "./cocktail-card/cocktail-card.component";
 import {CommonModule} from "@angular/common";
@@ -16,19 +16,19 @@ import {debounceTime, distinctUntilChanged, from, map, Observable, startWith} fr
   templateUrl: './cocktail-list.component.html',
   styleUrl: './cocktail-list.component.scss'
 })
-export class CocktailListComponent implements AfterViewInit {
+export class CocktailListComponent implements OnInit {
   @Input() cocktails: Cocktail[];
 
-  @ViewChild(FiltersComponent) filters: FiltersComponent;
+  @ViewChild(FiltersComponent, {static: true}) filters: FiltersComponent;
 
   filteredCocktails: Observable<Cocktail[]>;
 
-  ngAfterViewInit() {
+  ngOnInit() {
     this.filteredCocktails = from(this.filters.filterTerm)
       .pipe(
         debounceTime(300),
         distinctUntilChanged(),
-        map((filter) => this.cocktails.filter(cocktail => cocktail.name.toLowerCase().startsWith(filter.trim().toLowerCase()))),
+        map((filter) => this.cocktails.filter(cocktail => cocktail.name.toLowerCase().includes(filter.trim().toLowerCase()))),
         startWith(this.cocktails)
       )
   }
