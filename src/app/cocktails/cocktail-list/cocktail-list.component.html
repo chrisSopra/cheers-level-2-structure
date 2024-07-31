@@ -1,1 +1,5 @@
-<p>cocktail-list works!</p>
+<app-filters></app-filters>
+<div class="cocktail-cards">
+  <app-cocktail-card *ngFor="let cocktail of filteredCocktails | async" [cocktail]="cocktail"></app-cocktail-card>
+</div>
+

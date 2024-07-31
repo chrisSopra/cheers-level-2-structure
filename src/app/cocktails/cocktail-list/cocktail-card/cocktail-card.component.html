@@ -1,0 +1,9 @@
+<div class="card-image">
+  <img [src]="cocktail.imageUrl" [alt]="cocktail.name">
+</div>
+<div class="card-description">
+  <span [id]="'star-' + cocktail.id" class="icon-star"></span>
+  <h3>{{cocktail.name}}</h3>
+  <div [appBoolChip]="cocktail.isAlcoholic" truthyColor="blue" falsyColor="green">{{cocktail.isAlcoholic ? "Alcoholic" : "Non alcoholic"}}</div>
+  <div class="card-ingredients">{{cocktail.ingredients | pipeSeparatedValues}}</div>
+</div>

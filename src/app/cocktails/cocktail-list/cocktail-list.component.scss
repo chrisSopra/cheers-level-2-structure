@@ -1,0 +1,12 @@
+.cocktail-cards {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 5%;
+}
+
+app-filters {
+  margin-bottom: 1em;
+  background-color: #E5E9F0;
+}
