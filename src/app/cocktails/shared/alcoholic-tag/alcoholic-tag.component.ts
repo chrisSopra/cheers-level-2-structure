@@ -13,6 +13,6 @@ import {BoolChipDirective} from "../../../shared/bool-chip.directive";
 export class AlcoholicTagComponent {
   @Input({required: true}) isAlcoholic: boolean;
 
-  truthyColor = "#5E81AC";
-  falsyColor = "#A3BE8C";
+  readonly truthyColor = "#5E81AC";
+  readonly falsyColor = "#A3BE8C";
 }

@@ -3,7 +3,7 @@
 </div>
 <div class="card-description">
   <app-favorite-button [cocktailId]="cocktail.id"></app-favorite-button>
-  <h3>{{cocktail.name}}</h3>
+  <h3 [routerLink]="[cocktail.id]">{{cocktail.name}}</h3>
   <app-alcoholic-tag [isAlcoholic]="cocktail.isAlcoholic"></app-alcoholic-tag>
   <div class="card-ingredients">{{cocktail.ingredients | pipeSeparatedValues}}</div>
 </div>

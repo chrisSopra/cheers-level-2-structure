@@ -5,6 +5,7 @@ import {PipeSeparatedValuesPipe} from "../../../shared/pipe-separated-values.pip
 import {BoolChipDirective} from "../../../shared/bool-chip.directive";
 import {FavoriteButtonComponent} from "../../shared/favorite-button/favorite-button.component";
 import {AlcoholicTagComponent} from "../../shared/alcoholic-tag/alcoholic-tag.component";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-cocktail-card',
@@ -15,7 +16,8 @@ import {AlcoholicTagComponent} from "../../shared/alcoholic-tag/alcoholic-tag.co
     BoolChipDirective,
     NgClass,
     FavoriteButtonComponent,
-    AlcoholicTagComponent
+    AlcoholicTagComponent,
+    RouterLink
   ],
   templateUrl: './cocktail-card.component.html',
   styleUrl: './cocktail-card.component.scss'

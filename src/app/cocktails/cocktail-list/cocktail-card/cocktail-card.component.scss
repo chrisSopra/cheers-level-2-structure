@@ -27,6 +27,11 @@
 
   h3 {
     margin: 0 0 0.5em 0;
+
+    &:hover, &:active {
+      text-decoration: underline;
+      cursor: pointer;
+    }
   }
 
   app-favorite-button {

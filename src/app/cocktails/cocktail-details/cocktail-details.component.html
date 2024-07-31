@@ -1,0 +1,30 @@
+<button [routerLink]="['..']"><span class="icon-home"></span>Back</button>
+<div class="cocktail">
+  <div class="cocktail-image">
+    <img [src]="cocktail.imageUrl" [alt]="cocktail.name">
+  </div>
+  <div class="cocktail-description">
+    <div class="description-header">
+      <h3>{{cocktail.name}}</h3>
+      <app-favorite-button [cocktailId]="cocktail.id"></app-favorite-button>
+    </div>
+    <div class="description-content">
+      <div>
+        <p>Type</p>
+        <app-alcoholic-tag [isAlcoholic]="cocktail.isAlcoholic"></app-alcoholic-tag>
+      </div>
+      <div>
+        <p>Ingredients</p>
+        <ul>
+          <li *ngFor="let ingredient of cocktail.ingredients">
+            {{ingredient}}
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p>Instructions</p>
+        <p>{{cocktail.instructions}}</p>
+      </div>
+    </div>
+  </div>
+</div>
