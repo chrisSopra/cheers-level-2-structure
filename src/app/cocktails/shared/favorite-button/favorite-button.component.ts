@@ -14,11 +14,11 @@ export class FavoriteButtonComponent {
 
   @Input({required: true}) cocktailId: string;
 
-  isFavorite(id: string) {
+  isFavorite(id: string): boolean {
     return localStorage.getItem(id) === 'true';
   }
 
-  toggleFavorite(id: string) {
+  toggleFavorite(id: string): void {
     localStorage.setItem(id, String(!this.isFavorite(id)));
   }
 }

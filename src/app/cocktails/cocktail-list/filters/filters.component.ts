@@ -10,7 +10,7 @@ import {Component, EventEmitter, Output} from '@angular/core';
 export class FiltersComponent {
   @Output() filterTerm: EventEmitter<string> = new EventEmitter<string>();
 
-  filter(value: string) {
+  filter(value: string): void {
     this.filterTerm.emit(value);
   }
 }

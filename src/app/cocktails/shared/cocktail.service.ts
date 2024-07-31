@@ -16,7 +16,7 @@ export class CocktailService {
     return this.http.get<Cocktail[]>('/cocktails');
   }
 
-  getById(id: string) {
+  getById(id: string): Observable<Cocktail> {
     return this.http.get<Cocktail>(`/cocktails/${id}`);
   }
 }
